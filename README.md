@@ -1,4 +1,4 @@
-# RT-WiFi kernel Installation Guide on NVIDIA Jetson Nano
+# Atheros CSI Tool Installation Guide on NVIDIA Jetson Nano
 
 **In case you encounter any strange bug, instead of using the files from this repository, please use the files downloaded from NVIDIA website.** 
 
