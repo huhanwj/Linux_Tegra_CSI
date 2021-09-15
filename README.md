@@ -11,15 +11,11 @@ Download the following sources from NVIDIA:
 
 Extract 1 and 3 after downloading them.
 ---
-Note: This guide only works on compiling and install on a Jetson device, not for cross compiling.
-
 Before you get hands on compiling and install modules, make sure that you have already read the documents provided by NVIDIA.
 
 
+[Quick Start Guide](https://docs.nvidia.com/jetson/archives/l4t-archived/l4t-3261/index.html#page/Tegra%20Linux%20Driver%20Package%20Development%20Guide/quick_start.html)
 
-[Quick Start Guide](https://docs.nvidia.com/jetson/archives/l4t-archived/l4t-3231/index.html#page/Tegra%20Linux%20Driver%20Package%20Development%20Guide/quick_start.html)
-
-[Developer Guide](mercury.pr.erau.edu/~siewerts/cs415/documents/Jetson/Tegra_Linux_Driver_Package_Developers_Guide.pdf) (**Just for reference! Outdated!**)
 
 [Kernel Customization](https://docs.nvidia.com/jetson/l4t/index.html#page/Tegra%20Linux%20Driver%20Package%20Development%20Guide/kernel_custom.html#)
 
@@ -31,7 +27,7 @@ Follow the steps in this procedure to build the NVIDIA kernel.
 
 ### Prerequisites
 
-* You have downloaded the kernel source code (In &lt;top&gt;/linux-4.9/Linux_for_Tegra/source/public/kernel/kernel-4.9).
+* You have downloaded the kernel source code (In &lt;top&gt;/Linux_Tegra_CSI/Linux_for_Tegra/source/public/kernel/kernel-4.9).
 
 * You have installed the utilities required by the kernel build process.
 
@@ -86,10 +82,6 @@ Follow the steps in this procedure to build the NVIDIA kernel.
    make ARCH=arm64 O=$TEGRA_KERNEL_OUT menuconfig
    ```
 
-   The RT-WiFi function lays in **Device Drivers**-> **Network device support** -> **Wireless LAN** -> **RT-WiFi support**.
-
-   After enabling RT-WiFi support, remember to save to `.config`.
-
 5. Execute the following commands to build the kernel including all DTBs and modules:
 
    ```bash
@@ -118,7 +110,7 @@ Follow the steps in this procedure to build the NVIDIA kernel.
 1. Extract *L4T Sample Root File System* into `Linux_for_Tegra/rootfs/`:
 
 ```bash
-sudo tar xpf <your_dir>/Tegra_Linux_Sample-Root-Filesystem_R32.5.1_aarch64.tbz2 
+sudo tar xpf <your_dir>/Tegra_Linux_Sample-Root-Filesystem_R32.6.1_aarch64.tbz2 
 ```
 
 2. Archive the installed kernel modules using the following command:
